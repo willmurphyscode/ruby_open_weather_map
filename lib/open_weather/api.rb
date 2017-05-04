@@ -17,6 +17,10 @@ module OpenWeather
     def geocode(lat, lon, options = {})
       new(options.merge(lat: lat, lon: lon)).retrieve
     end
+
+    def zip(zip, options = {})
+      new(options.merge(zip: zip)).retrieve
+    end
   end
 
   module SeveralCitiesClassMethods
